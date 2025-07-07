@@ -1,0 +1,82 @@
+Ter 1 
+source ~/ros_dds_native/install/setup.bash
+ros2 bag play ~/ros_dds_native/rosbags/r2b_storage --read-ahead-queue-size 1000
+
+
+to loop : 
+
+ros2 bag play ~/ros_dds_native/rosbags/r2b_storage -l   --read-ahead-queue-size 1000
+
+
+to get info: 
+
+ros2 bag info ~/ros_dds_native/rosbags/r2b_storage
+=====> output 
+Files:             r2b_storage_0.db3
+Bag size:          2.9 GiB
+Storage id:        sqlite3
+Duration:          9.989835008s
+Start:             Feb 28 2023 22:35:00.980071424 (1677620100.980071424)
+End:               Feb 28 2023 22:35:10.969906432 (1677620110.969906432)
+Messages:          4034
+Topic information: Topic: d455_1_right_ir_image | Type: sensor_msgs/msg/Image | Count: 304 | Serialization Format: cdr
+                   Topic: pandar_xt_32_0_lidar | Type: sensor_msgs/msg/PointCloud2 | Count: 100 | Serialization Format: cdr
+                   Topic: /tf_static | Type: tf2_msgs/msg/TFMessage | Count: 1 | Serialization Format: cdr
+                   Topic: d455_1_rgb_camera_info | Type: sensor_msgs/msg/CameraInfo | Count: 304 | Serialization Format: cdr
+                   Topic: hawk_0_left_rgb_image | Type: sensor_msgs/msg/Image | Count: 300 | Serialization Format: cdr
+                   Topic: d455_1_depth_camera_info | Type: sensor_msgs/msg/CameraInfo | Count: 303 | Serialization Format: cdr
+                   Topic: d455_1_depth_image | Type: sensor_msgs/msg/Image | Count: 303 | Serialization Format: cdr
+                   Topic: hawk_0_left_rgb_camera_info | Type: sensor_msgs/msg/CameraInfo | Count: 300 | Serialization Format: cdr
+                   Topic: hawk_0_right_rgb_image | Type: sensor_msgs/msg/Image | Count: 300 | Serialization Format: cdr
+                   Topic: d455_1_left_ir_image | Type: sensor_msgs/msg/Image | Count: 304 | Serialization Format: cdr
+                   Topic: d455_1_left_ir_camera_info | Type: sensor_msgs/msg/CameraInfo | Count: 304 | Serialization Format: cdr
+                   Topic: d455_1_rgb_image | Type: sensor_msgs/msg/Image | Count: 304 | Serialization Format: cdr
+                   Topic: d455_1_imu | Type: sensor_msgs/msg/Imu | Count: 303 | Serialization Format: cdr
+                   Topic: hawk_0_right_rgb_camera_info | Type: sensor_msgs/msg/CameraInfo | Count: 300 | Serialization Format: cdr
+                   Topic: d455_1_right_ir_camera_info | Type: sensor_msgs/msg/CameraInfo | Count: 304 | Serialization Format: cdr
+
+kasha@kasha-IdeaPad-3-15ITL6:~/ros_dds_native$ 
+
+
+
+
+
+DDS export : 
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+
+
+
+
+
+===================================================================================================================
+
+
+
+
+
+Ter 2 : 
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+
+source install/ros2_dds_camera_benchmark/share/ros2_dds_camera_benchmark/local_setup.bash
+
+ros2 run ros2_dds_camera_benchmark image_subscriber_node   --ros-args -r /camera/image_raw:=d455_1_rgb_image
+
+
+
+
+===================================================================================================================
+
+ter 3 :
+
+ros2 topic hz d455_1_rgb_image    ===> twarina kol marra shnwa eli 9aad yetzed 
+
+
+
+head logs/timestamps.csv | column -t -s,      ===> tatina l timestamps file 
+
+
+watch -n1 ls -lh logs/timestamps.csv          =====> size taa file 
+
+
+
+
