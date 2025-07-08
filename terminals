@@ -68,14 +68,14 @@ ros2 run ros2_dds_camera_benchmark image_subscriber_node   --ros-args -r /camera
 
 ter 3 :
 
-ros2 topic hz d455_1_rgb_image    ===> twarina kol marra shnwa eli 9aad yetzed 
+ros2 topic hz d455_1_rgb_image    ===> shows current changes to the file
 
 
 
-head logs/timestamps.csv | column -t -s,      ===> tatina l timestamps file 
+head logs/timestamps.csv | column -t -s,      ===>  timestamps of file 
 
 
-watch -n1 ls -lh logs/timestamps.csv          =====> size taa file 
+watch -n1 ls -lh logs/timestamps.csv          =====> size of file 
 
 
 

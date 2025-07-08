@@ -1,0 +1,17 @@
+<dds>
+  <profiles>
+    <qos_profile name="custom_qos_profile" is_default="true">
+      <reliability>
+        <kind>BEST_EFFORT</kind>
+      </reliability>
+      <history>
+        <kind>KEEP_LAST</kind>
+        <depth>5</depth>
+      </history>
+      <durability>
+        <kind>VOLATILE</kind>
+      </durability>
+    </qos_profile>
+  </profiles>
+</dds>
+

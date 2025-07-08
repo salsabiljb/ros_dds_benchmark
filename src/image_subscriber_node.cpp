@@ -1,9 +1,7 @@
-// src/image_subscriber_node.cpp
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/image.hpp"
-
-#include <algorithm>
 #include <chrono>
+#include <algorithm>
 #include <filesystem>
 #include <fstream>
 #include <unordered_map>
@@ -16,9 +14,10 @@ public:
   MultiImageSubscriber()
   : Node("multi_image_subscriber")
   {
+
     std::filesystem::create_directories("logs");
 
-    /* Wait a few seconds to see topics */
+    /* Wait */
     timer_ = this->create_wall_timer(
       5s,
       std::bind(&MultiImageSubscriber::discover_topics, this));
@@ -49,7 +48,7 @@ private:
           std::ofstream("logs/" + clean + ".csv");
         log << "seq,frame_id,img_timestamp,recv_timestamp,latency\n";
 
-        /* create subscription */
+        /* create sub */
         subs_.push_back(
           this->create_subscription<sensor_msgs::msg::Image>(
             topic,
@@ -64,9 +63,9 @@ private:
               auto & log = logs_[topic];
               log << seq[topic]++ << ','
                   << msg->header.frame_id << ','
-                  << ts.nanoseconds()   << ','
-                  << now.nanoseconds()        << ','
-                  << latency.nanoseconds()    << '\n';
+                  << ts.seconds()   << ','
+                  << now.seconds()        << ','
+                  << latency.seconds()    << '\n';
             }));
 
         RCLCPP_INFO(this->get_logger(),

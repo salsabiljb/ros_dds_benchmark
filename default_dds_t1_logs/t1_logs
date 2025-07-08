@@ -1,0 +1,67 @@
+python3 scripts/analyze_logs.py logs/*.csv
+
+=== _d455_1_left_ir_image ===
+frames    : 163
+drops     : 0
+mean (ms) :  5358.89
+median    : 5337.295
+p95       : 6371.228999999999
+p99       : 6553.476699999999
+std dev   :   581.53
+max       :  6598.84
+min       :  4375.24
+
+=== _d455_1_right_ir_image ===
+frames    : 160
+drops     : 0
+mean (ms) :  5326.27
+median    : 5325.95
+p95       : 6249.141999999999
+p99       : 6421.834799999999
+std dev   :   556.74
+max       :  6474.76
+min       :  4375.24
+
+=== _hawk_0_right_rgb_image ===
+frames    : 157
+drops     : 0
+mean (ms) :  5720.21
+median    : 5498.974999999999
+p95       : 7436.4
+p99       : 7621.6335
+std dev   :   917.08
+max       :  7678.84
+min       :  4411.42
+
+=== _d455_1_depth_image ===
+frames    : 169
+drops     : 0
+mean (ms) :  5449.72
+median    : 5397.5650000000005
+p95       : 6625.732500000001
+p99       : 6822.570000000001
+std dev   :   648.97
+max       :  6891.07
+min       :  4404.02
+
+=== _hawk_0_left_rgb_image ===
+frames    : 159
+drops     : 0
+mean (ms) :  5695.91
+median    : 5501.8
+p95       : 7533.503
+p99       : 7695.9316
+std dev   :   924.98
+max       :  7754.77
+min       :  4411.42
+
+=== _d455_1_rgb_image ===
+frames    : 177
+drops     : 0
+mean (ms) :  5504.93
+median    : 5419.615000000001
+p95       : 6870.4575
+p99       : 7079.29
+std dev   :   719.23
+max       :  7133.12
+min       :  4375.24

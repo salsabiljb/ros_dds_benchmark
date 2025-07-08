@@ -60,7 +60,7 @@ def analyze_logs(csv_files):
                      Path("performance_report")/bn,
                      title=bn)
 
-# Replace with the actual list of CSV files you want to analyze
+
 csv_files = [str(p) for p in Path("logs").glob("*.csv")]
 analyze_logs(csv_files)
 

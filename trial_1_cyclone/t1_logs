@@ -1,0 +1,68 @@
+(ros_dds_venv) kasha@kasha-IdeaPad-3-15ITL6:~/ros_dds_native$ python3 scripts/analyze_logs.py logs/*.csv
+
+=== _d455_1_left_ir_image ===
+frames    : 163
+drops     : 0
+mean (ms) :  7959.26
+median    : 8029.585000000001
+p95       : 9800.293499999998
+p99       : 9950.382000000001
+std dev   :  1197.39
+max       : 10001.30
+min       :  5385.42
+
+=== _d455_1_right_ir_image ===
+frames    : 317
+drops     : 0
+mean (ms) :  7596.65
+median    : 7613.93
+p95       : 9984.119999999999
+p99       : 10323.775999999998
+std dev   :  1536.70
+max       : 10469.60
+min       :  4900.09
+
+=== _hawk_0_right_rgb_image ===
+frames    : 156
+drops     : 0
+mean (ms) :  5712.77
+median    : 5574.6
+p95       : 6974.535
+p99       : 7194.2519999999995
+std dev   :   604.05
+max       :  7274.27
+min       :  4893.35
+
+=== _d455_1_depth_image ===
+frames    : 169
+drops     : 0
+mean (ms) :  5781.02
+median    : 5605.88
+p95       : 7236.448
+p99       : 7449.9596
+std dev   :   696.16
+max       :  7493.79
+min       :  4881.82
+
+=== _hawk_0_left_rgb_image ===
+frames    : 160
+drops     : 0
+mean (ms) :  5789.31
+median    : 5651.65
+p95       : 7233.840999999999
+p99       : 7428.1954
+std dev   :   684.06
+max       :  7467.41
+min       :  4910.36
+
+=== _d455_1_rgb_image ===
+frames    : 177
+drops     : 0
+mean (ms) :  6147.88
+median    : 5834.68
+p95       : 8097.0975
+p99       : 8321.660000000002
+std dev   :  1010.26
+max       :  8394.47
+min       :  4908.63
+
